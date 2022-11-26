@@ -1,0 +1,18 @@
+CREATE DATABASE density;
+
+USE density;
+
+CREATE TABLE posts(
+    id INT(11) NOT NULL,
+    author VARCHAR(30) NOT NULL,
+    content VARCHAR(255) NOT NULL,
+    isDeleted BOOLEAN NOT NULL DEFAULT 0
+);
+
+ALTER TABLE posts
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE posts
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT;
+
+DESCRIBE posts;
